@@ -1,3 +1,8 @@
 .navbar {
   font-size: 1.25em;
 }
+
+td > ul,
+td > ol {
+  margin-bottom: 0;
+}
