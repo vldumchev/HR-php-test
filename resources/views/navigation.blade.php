@@ -13,6 +13,9 @@
         <li>
           <a href="{{ route('current-temperature', ['country' => 'Россия', 'city' => 'Брянск']) }}">Температура в Брянске</a>
         </li>
+        <li>
+          <a href="{{ route('orders.list') }}">Заказы</a>
+        </li>
       </ul>
     </div>
   </div>
