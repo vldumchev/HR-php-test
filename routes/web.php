@@ -16,3 +16,11 @@ Route::get('/', function () {
 });
 
 Route::get('/current-temperature', 'ShowCurrentTemperature')->name('current-temperature');
+
+Route::name('orders.')->group(function () {
+    Route::prefix('orders')->group(function () {
+        Route::get('/', 'OrderController@index')->name('list');
+        Route::get('/{id}', 'OrderController@edit')->name('edit');
+        Route::patch('/{id}', 'OrderController@update')->name('update');
+    });
+});
