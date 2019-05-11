@@ -16,6 +16,9 @@
         <li>
           <a href="{{ route('orders.list') }}">Заказы</a>
         </li>
+        <li>
+          <a href="{{ route('products.list') }}">Продукты</a>
+        </li>
       </ul>
     </div>
   </div>
