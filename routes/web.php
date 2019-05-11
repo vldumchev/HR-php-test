@@ -24,3 +24,5 @@ Route::name('orders.')->group(function () {
         Route::patch('/{id}', 'OrderController@update')->name('update');
     });
 });
+
+Route::get('/products', 'ProductController@index')->name('products.list');
