@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('orders.list');
 });
 
 Route::get('/current-temperature', 'ShowCurrentTemperature')->name('current-temperature');
