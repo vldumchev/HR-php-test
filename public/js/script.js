@@ -9,7 +9,7 @@ $('button[data-component="price-opener"]').on('click', (event) => {
   modal.modal('show')
 })
 
-$('#modal-price form').submit(({ target }) => {
+$('#modal-price form').submit(event => {
   event.preventDefault()
 
   $('#modal-price').modal('hide')
@@ -19,7 +19,7 @@ $('#modal-price form').submit(({ target }) => {
   $.ajax({
     url: form.action,
     type: 'PATCH',
-    data: $(target).serialize()
+    data: $(form).serialize()
   }).done((response) => {
     $(`[data-product-id="${response.id}"] > [data-component="price"]`).html(response.price)
   })
